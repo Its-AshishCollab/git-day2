@@ -1,53 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashish Sah - Personal Webpage</title>
-    <style>
-        body {
-            background: #f4f4f4;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            background: #fff;
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 30px 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        h2 {
-            color: #2980b9;
-            margin-top: 30px;
-        }
-        ul {
-            list-style: disc inside;
-            padding-left: 0;
-        }
-        a {
-            color: #2980b9;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #fff;
+      background: linear-gradient(120deg, #8e44ad, #3498db);
+      background-size: 200% 200%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      animation: fadeInDown 1.2s ease;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      opacity: 0.8;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #fff;
+      margin: 10px auto 0;
+      border-radius: 5px;
+    }
+
+    .about, .skills, .contact {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .skills li {
+      background: rgba(255,255,255,0.1);
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: 0.3s ease;
+    }
+
+    .skills li:hover {
+      background: #fff;
+      color: #333;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #fff;
+      text-decoration: underline;
+      transition: 0.3s ease;
+    }
+
+    .contact a:hover {
+      color: #ffeaa7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9em;
+      opacity: 0.7;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      section { padding: 40px 15px; }
+      .skills ul { flex-direction: column; align-items: center; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Ashish Sah</h1>
-        <p>Hello! I am Ashish Sah, a web enthusiast.</p>
-        <h2>About Me</h2>
-        <ul>
-            <li>Location: [Your Location]</li>
-            <li>Profession: [Your Profession]</li>
-            <li>Interests: Coding, Web Development, Learning</li>
-        </ul>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+
+  <header>
+    <h1>Ashsih Sah</h1>
+    <p>Web Developer • Designer • Creative Thinker</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <div class="about">
+      <p>Hello! I'm a passionate developer who loves crafting beautiful websites and solving real-world problems with code. My journey in tech started with curiosity and became a lifelong mission to create and inspire.</p>
     </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Responsive Design</li>
+        <li>UI/UX</li>
+        <li>Git & GitHub</li>
+        <li>Python</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>Want to work together or just say hi?</p>
+      <a href="mailto:ashishsah243@gmail.com">ashishsah243@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
+
 </body>
+</html>
